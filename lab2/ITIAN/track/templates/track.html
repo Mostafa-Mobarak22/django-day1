@@ -1,0 +1,19 @@
+{%extends 'index.html'%}
+{%block 'title'%}
+Track Page
+{%endblock%}
+{%block 'header'%}
+Track
+{%endblock%}
+{%block 'create'%}
+<a href ="{%url 'create_track'%}">Create Track</a>
+{%endblock%}
+{%block 'delete'%}
+<a href ="{%url 'delete_track'%}">Delete Track</a>
+{%endblock%}
+{%block 'update'%}
+<a href ="{%url 'update_track'%}">Update Track</a>
+{%endblock%}
+{%block 'show'%}
+<a href ="{%url 'list_track'%}">Show Tracks</a>
+{%endblock%}

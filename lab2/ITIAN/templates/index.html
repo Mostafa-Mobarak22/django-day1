@@ -1,0 +1,69 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{%static "assets/css/bootstrap.min.css"%}'>
+    <link rel="stylesheet" href='{%static "assets/css/style.css"%}'>
+    <title>
+        {%block 'title'%}
+        ITIAN
+        {%endblock%}
+    </title>
+</head>
+<body>
+    <div class="py-5 vh-50">
+         <table class="table w-50 mx-auto text-center shadow-lg h-100">
+            <thead>
+                <tr>
+
+                    <th scope="col">
+                        {%block 'header'%}
+                        ITIAN
+                        {%endblock%}
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                    <td>
+
+                           {%block 'create'%}
+                            <a href ='#'></a>
+                            {%endblock%}
+
+
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        {%block 'show'%}
+                        <a href ='#'></a>
+                        {%endblock%}
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        {%block 'delete'%}
+                        <a href ='#'></a>
+                        {%endblock%}
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        {%block 'update'%}
+                        <a href ='#'></a>
+                        {%endblock%}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src='{%static "assets/js/bootstrap.bundle.min.js"%}'></script>
+</body>
+</html>
