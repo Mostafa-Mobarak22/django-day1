@@ -1,0 +1,30 @@
+{%extends 'list_db.html'%}
+{%block 'title'%}
+Track DataBase
+{%endblock%}
+{%block 'header'%}
+<td>ID</td>
+<td>NAME</td>
+<td>IMAGE</td>
+<td>ACTIONS</td>
+{%endblock%}
+{%block 'data'%}
+{%for track in tracks%}
+<tr >
+    <td >
+        {{track.id}}
+    </td>
+    <td>
+        {{track.name}}
+    </td>
+    <td>
+        fkvnfvdfn
+    </td>
+    <td>
+        <a href="{%url 'update_track' track.id%}" class="text-decoration-none text-warning">Update</a>
+        <a href="{%url 'delete_track' track.id%}" class="text-decoration-none text-warning">Delete</a>
+        <a href="{%url 'show_track' track.id%}" class="text-decoration-none text-warning">Show</a>
+    </td>
+</tr>
+{%endfor%}
+{%endblock%}

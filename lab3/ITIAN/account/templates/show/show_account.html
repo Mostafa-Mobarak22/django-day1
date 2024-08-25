@@ -1,0 +1,22 @@
+{%extends 'show_item.html'%}
+{%block 'title'%}
+ACCOUNT DETAILS
+{%endblock%}
+{%block 'header'%}
+<td>ID</td>
+<td>NAME</td>
+<td>DESCRIPTION</td>
+{%endblock%}
+{%block 'data'%}
+<tr >
+    <td >
+        {{accounts.id}}
+    </td>
+    <td>
+        {{accounts.name}}
+    </td>
+    <td>
+        {{accounts.description}}
+    </td>
+</tr>
+{%endblock%}

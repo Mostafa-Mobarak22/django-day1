@@ -1,0 +1,30 @@
+{%extends 'list_db.html'%}
+{%block 'title'%}
+Trainee DataBase
+{%endblock%}
+{%block 'header'%}
+<td>ID</td>
+<td>NAME</td>
+<td>TRACK_ID</td>
+<td>ACTIONS</td>
+{%endblock%}
+{%block 'data'%}
+{%for trainee in trainees%}
+<tr >
+    <td >
+        {{trainee.id}}
+    </td>
+    <td>
+        {{trainee.name}}
+    </td>
+    <td>
+        {{trainee.trackobject.name}}
+    </td>
+    <td>
+        <a href="{%url 'update_trainee' trainee.id%}" class="text-decoration-none text-warning">Update</a>
+        <a href="{%url 'delete_trainee' trainee.id%}" class="text-decoration-none text-warning">Delete</a>
+        <a href="{%url 'show_trainee' trainee.id%}" class="text-decoration-none text-warning">Show</a>
+    </td>
+</tr>
+{%endfor%}
+{%endblock%}

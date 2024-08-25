@@ -1,0 +1,18 @@
+{%extends 'show_item.html'%}
+{%block 'title'%}
+TRACK DETAILS
+{%endblock%}
+{%block 'header'%}
+<td>ID</td>
+<td>NAME</td>
+{%endblock%}
+{%block 'data'%}
+<tr >
+    <td >
+        {{tracks.id}}
+    </td>
+    <td>
+        {{tracks.name}}
+    </td>
+</tr>
+{%endblock%}
