@@ -5,6 +5,7 @@ Trainee DataBase
 {%block 'header'%}
 <td>ID</td>
 <td>NAME</td>
+<td>IMAGE</td>
 <td>TRACK_ID</td>
 <td>ACTIONS</td>
 {%endblock%}
@@ -16,6 +17,9 @@ Trainee DataBase
     </td>
     <td>
         {{trainee.name}}
+    </td>
+    <td>
+        {{trainee.img}}
     </td>
     <td>
         {{trainee.trackobject.name}}

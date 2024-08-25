@@ -20,7 +20,10 @@
                         <input type="text" name="traineename" value="{{traineeobj.name}}" id="name" class="form-control" placeholder="Name" aria-label="Name" required>
                         <p class="text-danger">{{error}}</p>
                     </div>
-
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Image</label>
+                        <input class="form-control" value="{{traineeobj.img}}" name="image" type="file" id="formFile">
+                    </div>
                     <div class="my-3">
                         <select class="form-select" aria-label="Default select example" name="trackobj">
                             {%for track in trackobjs%}

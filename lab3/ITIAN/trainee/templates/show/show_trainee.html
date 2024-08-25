@@ -5,24 +5,26 @@ Trainee DataBase
 {%block 'header'%}
 <td>ID</td>
 <td>NAME</td>
+<td>IMAGE</td>
 <td>TRACK_ID</td>
-<td>ACTIONS</td>
 {%endblock%}
 {%block 'data'%}
 <tr >
     <td >
-        {{accounts.id}}
+        {{trainees.id}}
     </td>
     <td>
-        {{accounts.name}}
+        {{trainees.name}}
     </td>
     <td>
-        {{accounts.trackobject}}
+        <img src="/media/{{trainees.img}}">
     </td>
     <td>
-        <a href="{%url 'update_trainee' trainee.id%}" class="text-decoration-none text-warning">Update</a>
-        <a href="{%url 'delete_trainee' trainee.id%}" class="text-decoration-none text-warning">Delete</a>
-        <a href="{%url 'create_trainee' trainee.id%}" class="text-decoration-none text-warning">Create</a>
+        {{trainees.trackobject.name}}
     </td>
+
 </tr>
+{%endblock%}
+{%block 'img'%}
+<img src="/media/{{trainees.img}}">
 {%endblock%}

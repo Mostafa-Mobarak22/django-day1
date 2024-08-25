@@ -21,7 +21,7 @@ def update_trainee(req,id):
     context['trackobjs']=Track.objects.all()
     if(req.method=='POST'):
         if(len(req.POST['traineename'])>0 and len(req.POST['traineename'])<=50):
-            Trainee.objects.filter(pk=id).update(name=req.POST['traineename'],trackobject=Track.objects.get(pk=req.POST['trackobj']))
+            Trainee.objects.filter(pk=id).update(name=req.POST['traineename'],trackobject=Track.objects.get(pk=req.POST['trackobj']),img=req.POST['image'])
             return redirect('list_trainee')
         else:
             context['error']="invalid trainee"
@@ -40,9 +40,11 @@ def create_trainee(req):
     context['trackobjs']=Track.objects.all()
     if(req.method=='POST'):
         if(len(req.POST['traineename'])>0 and len(req.POST['traineename'])<=50):
+            # print(req.FILES['image'])
             traineeobject = Trainee()
             traineeobject.name = req.POST['traineename']
             traineeobject.trackobject = Track.objects.get(pk=req.POST['trackobj'])
+            traineeobject.img = req.FILES['image']
             traineeobject.save()
             return redirect('list_trainee')
         else:

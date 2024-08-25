@@ -4,4 +4,5 @@ from track.models import *
 class Trainee(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
+    img = models.ImageField(upload_to ='trainee/images',null=True)
     trackobject = models.ForeignKey('track.Track',on_delete=models.CASCADE)

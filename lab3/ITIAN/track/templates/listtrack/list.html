@@ -5,7 +5,6 @@ Track DataBase
 {%block 'header'%}
 <td>ID</td>
 <td>NAME</td>
-<td>IMAGE</td>
 <td>ACTIONS</td>
 {%endblock%}
 {%block 'data'%}
@@ -16,9 +15,6 @@ Track DataBase
     </td>
     <td>
         {{track.name}}
-    </td>
-    <td>
-        fkvnfvdfn
     </td>
     <td>
         <a href="{%url 'update_track' track.id%}" class="text-decoration-none text-warning">Update</a>
