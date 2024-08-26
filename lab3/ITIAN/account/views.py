@@ -32,8 +32,7 @@ def delete_account(req,id):
         return redirect('list_account')
     except:
         context['error'] = sys.exc_info()[1]
-
-    return render(req,'delete/delete.html',{'id':id})
+    return render(req,'delete/delete.html',context)
 def create_account(req):
     context = {}
     if(req.method=='POST'):

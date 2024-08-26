@@ -3,7 +3,7 @@ from lib2to3.fixes.fix_input import context
 from django.urls import path,include
 from .views import *
 from django.conf import settings
-from  django.conf.urls.static import static
+from django.conf.urls.static import static
 urlpatterns = [
    path('list/',list_trainee,name='list_trainee'),
    path('',trainee_trainee,name='trainee_trainee'),
@@ -12,4 +12,4 @@ urlpatterns = [
    path('create/',create_trainee,name='create_trainee'),
    path('show/<int:id>',show_trainee,name='show_trainee'),
 
-]+static(settings.MEDIA_URL,document=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
