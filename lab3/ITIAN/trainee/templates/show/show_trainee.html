@@ -1,4 +1,4 @@
-{%extends 'list_db.html'%}
+{%extends 'show_item.html'%}
 {%block 'title'%}
 Trainee DataBase
 {%endblock%}
@@ -17,14 +17,11 @@ Trainee DataBase
         {{trainees.name}}
     </td>
     <td>
-        <img src="/media/{{trainees.img}}" alt="">
+        <img src="{{trainees.getimage}}" alt="">
     </td>
     <td>
         {{trainees.trackobject.name}}
     </td>
 
 </tr>
-{%endblock%}
-{%block 'img'%}
-<img src="/media/{{trainees.img}}">
 {%endblock%}

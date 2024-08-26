@@ -6,3 +6,6 @@ class Trainee(models.Model):
     name = models.CharField(max_length=50)
     img = models.ImageField(upload_to='trainee/images', blank=True, null=True)
     trackobject = models.ForeignKey('track.Track',on_delete=models.CASCADE)
+
+    def getimage(self):
+        return f'/media/{self.img}'
