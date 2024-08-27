@@ -1,0 +1,30 @@
+{%extends 'list_db.html'%}
+{%block 'title'%}
+Account DataBase
+{%endblock%}
+{%block 'header'%}
+<td>ID</td>
+<td>NAME</td>
+<td>DESCRIPTION</td>
+<td>ACTIONS</td>
+{%endblock%}
+{%block 'data'%}
+{%for account in accounts%}
+<tr >
+    <td >
+        {{account.id}}
+    </td>
+    <td>
+        {{account.name}}
+    </td>
+    <td>
+        {{account.description}}
+    </td>
+    <td>
+        <a href="{%url 'update_account' account.id%}" class="text-decoration-none text-warning">Update</a>
+        <a href="{%url 'delete_account' account.id%}" class="text-decoration-none text-warning">Delete</a>
+        <a href="{%url 'show_account' account.id%}" class="text-decoration-none text-warning">Show</a>
+    </td>
+</tr>
+{%endfor%}
+{%endblock%}

@@ -1,0 +1,24 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='{%static "assets/css/bootstrap.min.css"%}'>
+    <link rel="stylesheet" href='{%static "assets/css/style.css"%}'>
+    <title>ADD Trainee</title>
+</head>
+<body>
+    <div class="container">
+        <div class="w-50 mt-5 shadow-lg p-3 mx-auto">
+            <h1 class="text-center my-2">Add Track</h1>
+            <form method="post" class="w-100 my-3" enctype="multipart/form-data">
+                {%csrf_token%}
+                {{form.as_p}}
+                <button class="btn btn-primary w-25 mx-auto" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src='{%static "assets/js/bootstrap.bundle.min.js"%}'></script>
+</body>
+</html>

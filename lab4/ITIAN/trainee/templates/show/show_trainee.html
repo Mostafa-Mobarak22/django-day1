@@ -1,0 +1,27 @@
+{%extends 'show_item.html'%}
+{%block 'title'%}
+Trainee DataBase
+{%endblock%}
+{%block 'header'%}
+<td>ID</td>
+<td>NAME</td>
+<td>IMAGE</td>
+<td>TRACK_ID</td>
+{%endblock%}
+{%block 'data'%}
+<tr >
+    <td>
+        {{trainees.id}}
+    </td>
+    <td>
+        {{trainees.name}}
+    </td>
+    <td>
+        <img src="{{trainees.getimage}}" alt="">
+    </td>
+    <td>
+        {{trainees.trackobject.name}}
+    </td>
+
+</tr>
+{%endblock%}
